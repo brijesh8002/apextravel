@@ -1,0 +1,48 @@
+<nav class="navbar container">
+  <a href="index.html" class="logo">
+    <img src="assets/media/logo.webp" alt="" />
+  </a>
+
+  <!-- <div class="navigation-links "> -->
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="glimpse.html">Glimpse</a>
+
+    <div class="tour-drop">
+      <span class="tour-link"> Tours <i class="bi bi-chevron-down"></i> </span>
+
+      <div class="dropdown-tour">
+        <a href="allTours.html">All Tours</a>
+        <a href="sameDay.html">Same Day Packages</a>
+        <a href="overNight.html">Overnight Packages</a>
+        <a href="golden.html">Golden Triangle Packages</a>
+      </div>
+    </div>
+
+    <a href="tourplan.html">Plan Your Tour</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="d-flex gap-3 align-item-center">
+    <div class="user-dropdown-wrapper">
+      <a href="javascript:void(0)" class="contact-btn" onclick="toggleUserMenu(event)">
+        <span><i class="bi bi-person-circle"></i></span>
+        <p class="user-text m-0">Guest</p>
+      </a>
+
+      <div class="user-dropdown" id="userDropdown">
+        <div class="dropdown-header"><i class="bi bi-person-circle"></i> Guest</div>
+
+        <a href="authentication.html"><i class="bi bi-box-arrow-in-right"></i> Sign In</a>
+        <a href="profile.html"><i class="bi bi-person-fill"></i> Profile</a>
+        <a href="wishlist.html"><i class="bi bi-heart"></i> My Favorites</a>
+        <a href="mybooking.html"><i class="bi bi-calendar"></i> My Bookings</a>
+        <!-- <a href="#"><i class="bi bi-tag"></i> Join Marriott Bonvoy</a> -->
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>

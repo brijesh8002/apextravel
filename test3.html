@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+/* Wrapper (instead of body) */
+.super-wrapper{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#2b0000,#5a0000);
+    padding:20px;
+}
+
+/* Card */
+.super-card{
+    background:#fff;
+    width:100%;
+    max-width:420px;
+    padding:35px 25px;
+    border-radius:16px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* Logo */
+.super-logo{
+    text-align:center;
+    font-size:24px;
+    font-weight:700;
+    color:#D60000;
+    margin-bottom:10px;
+}
+
+/* Titles */
+.super-title{
+    text-align:center;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.super-subtitle{
+    text-align:center;
+    color:#6A6A68;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+/* Group */
+.super-group{
+    margin-bottom:18px;
+}
+
+.super-label{
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:6px;
+    display:block;
+}
+
+/* Input box */
+.super-input-box{
+    position:relative;
+    width:100%;
+}
+
+/* IMPORTANT FIX */
+.super-input{
+    width:100%;
+    padding:12px 40px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:14px;
+    box-sizing:border-box; /* 🔥 FIX OVERFLOW */
+}
+
+/* Focus */
+.super-input:focus{
+    border-color:#D60000;
+    box-shadow:0 0 8px rgba(214,0,0,0.2);
+    outline:none;
+}
+
+/* Icons */
+.super-input-box i{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    color:#888;
+    font-size:16px;
+}
+
+.super-left{
+    left:12px;
+}
+
+.super-right{
+    right:12px;
+    cursor:pointer;
+}
+
+/* Forgot */
+.super-forgot{
+    text-align:right;
+    font-size:12px;
+    margin-top:-8px;
+    margin-bottom:18px;
+}
+
+.super-forgot a{
+    text-decoration:none;
+    color:#D60000;
+}
+
+/* Button */
+.super-btn{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#8b0000,#D60000);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.super-btn:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .super-card{
+        padding:25px 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="super-wrapper">
+
+    <div class="super-card">
+
+        <div class="super-logo">LAAT SAHEB</div>
+
+        <div class="super-title">Welcome Back</div>
+        <div class="super-subtitle">Login to continue</div>
+
+        <!-- Email -->
+        <div class="super-group">
+            <label class="super-label">Email Address</label>
+            <div class="super-input-box">
+                <i class="bi bi-envelope super-left"></i>
+                <input type="email" class="super-input" placeholder="Enter your email">
+            </div>
+        </div>
+
+        <!-- Password -->
+        <div class="super-group">
+            <label class="super-label">Password</label>
+            <div class="super-input-box">
+                <i class="bi bi-lock super-left"></i>
+                <input type="password" id="superPass" class="super-input" placeholder="Enter your password">
+                <i class="bi bi-eye super-right" onclick="superToggle()"></i>
+            </div>
+        </div>
+
+        <!-- <div class="super-forgot">
+            <a href="#">Forgot Password?</a>
+        </div> -->
+
+        <button class="super-btn">Login</button>
+
+    </div>
+
+</div>
+
+<script>
+function superToggle(){
+    let input = document.getElementById("superPass");
+    input.type = input.type === "password" ? "text" : "password";
+}
+</script>
+
+</body>
+</html>
