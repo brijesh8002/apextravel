@@ -69,16 +69,23 @@ document.querySelectorAll(".ae4-time").forEach((btn) => {
   };
 });
 
-// package active toggle
-document.querySelectorAll(".ae4-option").forEach((btn) => {
-  btn.onclick = () => {
-    document
-      .querySelectorAll(".ae4-option")
-      .forEach((b) => b.classList.remove("active"));
+function activeToggle(selector) {
+  document.querySelectorAll(selector).forEach((btn) => {
+    btn.onclick = () => {
+      document
+        .querySelectorAll(selector)
+        .forEach((b) => b.classList.remove("active"));
 
-    btn.classList.add("active");
-  };
-});
+      btn.classList.add("active");
+    };
+  });
+}
+
+// package toggle
+activeToggle(".ae4-option");
+
+// hotel toggle
+activeToggle(".hotel-choose");
 
 // Tour Form===============================================>
 
@@ -238,3 +245,31 @@ window.addEventListener("scroll", () => {
   dropdown.classList.remove("active");
   button.classList.remove("active");
 });
+
+
+
+
+// Tour Detail Page Itenary section
+
+function toggleStops(){
+
+    const more = document.querySelector(".ae-more");
+    const btn = document.getElementById("aeBtn");
+
+    more.classList.toggle("ae-hidden");
+
+    btn.classList.toggle("active");
+
+    if(more.classList.contains("ae-hidden")){
+
+        btn.querySelector("span").innerText = "Show 3 more stops";
+
+    }else{
+
+        btn.querySelector("span").innerText = "Show fewer stops";
+    }
+}
+
+
+
+
