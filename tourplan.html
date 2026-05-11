@@ -36,9 +36,8 @@
             <h5 class="package-heading second-heading text-center text-uppercase my-3">
                 Plan Your Tour
             </h5>
-            <h1 class="fw-bold text-center">Tell us how you want to travel.</h1>
-            <p class="text-center">A few simple details are enough for us to shape a custom route around your time,
-                comfort, and interests.</p>
+            <h1 class="fw-bold text-center">Plan this trip your way</h1>
+            <p class="text-center">Share your details and we’ll get back with availability, pricing, and any custom help you need.</p>
 
             <!-- Cards start -->
 
@@ -154,73 +153,77 @@
                                         <h3 class="ae-form-title">
                                             Travellers
                                         </h3>
+
+                                        <!-- Date -->
+                                        <div class="mb-3">
+                                            <label class="ae4-label">Date</label>
+
+                                            <div class="ae4-date-box">
+                                                <div class="ae4-date-left">
+                                                    <input type="radio" checked>
+                                                    <div>
+                                                        <div class="ae4-day" id="ae4Day">Wednesday</div>
+                                                        <small id="ae4FullDate">6 May 2026</small>
+                                                    </div>
+                                                </div>
+
+                                                <button type="button" class="ae4-change-btn"
+                                                    onclick="ae4OpenCalendar()">
+                                                    Change date
+                                                </button>
+
+                                                <input type="date" class="ae4-hidden-date" id="ae4DateInput">
+                                            </div>
+                                            <!-- Calendar -->
+                                            <div class="ae4-calendar" id="ae4Calendar">
+
+                                                <!-- Header -->
+                                                <div class="ae4-calendar-header">
+
+                                                    <button class="ae4-nav-btn" onclick="ae4PrevMonth()">
+
+                                                        <i class="bi bi-chevron-left"></i>
+
+                                                    </button>
+
+                                                    <div class="ae4-month" id="ae4MonthYear">
+
+                                                    </div>
+
+                                                    <button class="ae4-nav-btn" onclick="ae4NextMonth()">
+
+                                                        <i class="bi bi-chevron-right"></i>
+
+                                                    </button>
+
+                                                </div>
+
+                                                <!-- Weekdays -->
+                                                <div class="ae4-weekdays">
+
+                                                    <span>Sun</span>
+                                                    <span>Mon</span>
+                                                    <span>Tue</span>
+                                                    <span>Wed</span>
+                                                    <span>Thu</span>
+                                                    <span>Fri</span>
+                                                    <span>Sat</span>
+
+                                                </div>
+
+                                                <!-- Days -->
+                                                <div class="ae4-days" id="ae4CalendarDays">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
                                         <div class="mt-2">
                                             <input type="text" placeholder="Travel Destination" class="ae-input w-100">
 
                                         </div>
-                                        <!-- Date -->
-                        <div class="mb-3">
-                            <label class="ae4-label">Date</label>
-
-                            <div class="ae4-date-box">
-                                <div class="ae4-date-left">
-                                    <input type="radio" checked>
-                                    <div>
-                                        <div class="ae4-day" id="ae4Day">Wednesday</div>
-                                        <small id="ae4FullDate">6 May 2026</small>
-                                    </div>
-                                </div>
-
-                                <button type="button" class="ae4-change-btn" onclick="ae4OpenCalendar()">
-                                    Change date
-                                </button>
-
-                                <input type="date" class="ae4-hidden-date" id="ae4DateInput">
-                            </div>
-                            <!-- Calendar -->
-                            <div class="ae4-calendar" id="ae4Calendar">
-
-                                <!-- Header -->
-                                <div class="ae4-calendar-header">
-
-                                    <button class="ae4-nav-btn" onclick="ae4PrevMonth()">
-
-                                        <i class="bi bi-chevron-left"></i>
-
-                                    </button>
-
-                                    <div class="ae4-month" id="ae4MonthYear">
-
-                                    </div>
-
-                                    <button class="ae4-nav-btn" onclick="ae4NextMonth()">
-
-                                        <i class="bi bi-chevron-right"></i>
-
-                                    </button>
-
-                                </div>
-
-                                <!-- Weekdays -->
-                                <div class="ae4-weekdays">
-
-                                    <span>Sun</span>
-                                    <span>Mon</span>
-                                    <span>Tue</span>
-                                    <span>Wed</span>
-                                    <span>Thu</span>
-                                    <span>Fri</span>
-                                    <span>Sat</span>
-
-                                </div>
-
-                                <!-- Days -->
-                                <div class="ae4-days" id="ae4CalendarDays">
-
-                                </div>
-
-                            </div>
-                        </div>
+                                        
 
 
                                         <div class="d-flex justify-content-between gap-2">
@@ -395,6 +398,72 @@
                                                 <option value="Bhutan">Bhutan</option>
                                                 <option value="Maldives">Maldives</option>
                                             </select>
+                                            <select name="" class="w-100 mb-2 primary-input" id="">
+                                                <option value="">Transportation Preference</option>
+
+                                                <option value="Private Sedan Car">Private Sedan Car</option>
+                                                <option value="SUV">SUV</option>
+                                                <option value="Tempo Traveller (for Group tour)">Tempo Traveller (for Group tour)</option>
+                                                <option value="Luxury Car">Luxury Car</option>
+                                                <option value="No Preference">No Preference</option>
+                                                
+                                            </select>
+
+                                            <!-- Optional -->
+                                            <div class="mb-3">
+                                                <label class="ae4-label">Hotel Options</label>
+
+                                                <label class=" hotel-choose">
+                                                    <input type="radio" name="hotel-option">
+                                                    <div>
+                                                        <span>🌟 5-Star Hotel accommmodation</span>
+                                                        <p>● Golden Triangle with Ranthambore from Delhi. Enjoy the Best
+                                                            Accommodation in
+                                                            4-Star Hotels with breakfast & 2 Jungle Safari by Canter in
+                                                            Ranthambore National
+                                                            Park.</p>
+                                                        <p>● Pickup included</p>
+                                                        <p><b>● $80.00 Per Person</b></p>
+                                                    </div>
+                                                </label>
+
+                                                <label class=" hotel-choose active">
+                                                    <input type="radio" name="hotel-option" checked>
+                                                    <div>
+                                                        <span>🌟 4-Star Hotel accommmodation</span>
+
+                                                        <p>● Golden Triangle with Ranthambore from Delhi. Enjoy the Best
+                                                            Accommodation in
+                                                            4-Star Hotels with breakfast & 2 Jungle Safari by Canter in
+                                                            Ranthambore National
+                                                            Park.</p>
+                                                        <p>● Pickup included</p>
+                                                        <p><b>● $60.00 Per Person</b></p>
+                                                    </div>
+                                                </label>
+
+                                                <label class=" hotel-choose ">
+                                                    <input type="radio" name="hotel-option">
+                                                    <div>
+                                                        <span>🌟 3-Star Hotel Accommodation</span>
+                                                        <p>● Enjoy 3-Star Hotel Accommodation with Breakfast & 1 Canter
+                                                            Jungle Safari in
+                                                            Ranthambore National Park.</p>
+                                                        <p>● Pickup included</p>
+                                                        <p><b>● $40.00 Per Person</b></p>
+                                                    </div>
+                                                </label>
+                                                <label class=" hotel-choose ">
+                                                    <input type="radio" name="hotel-option">
+                                                    <div>
+                                                        <span>🌟 No Hotel Accommodation</span>
+                                                    </div>
+                                                </label>
+
+
+
+
+                                            </div>
 
                                             <div class="d-flex">
                                                 <textarea name=""
@@ -483,7 +552,7 @@
 
     </main>
 
-    
+
 
 
 
