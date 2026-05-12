@@ -767,6 +767,7 @@ background: radial-gradient(circle at top, #1f1f1f, #000000 70%);
   text-decoration: none;
   margin-bottom: 10px;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 .footer a:hover {
@@ -786,6 +787,9 @@ background: radial-gradient(circle at top, #1f1f1f, #000000 70%);
   color: #00c3ff;
   font-size: 18px;
   margin-top: 3px;
+}
+.contact-item span {
+  font-size: 14px;
 }
 
 
@@ -2148,7 +2152,7 @@ MODAL
   max-width: 880px;
   width: 100%;
 
-  max-height: 80vh;
+  max-height: 85vh;
 
   position: relative;
 
@@ -3338,7 +3342,7 @@ SIDEBAR
   justify-content: space-between;
   gap: 20px;
 
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 /* left */
@@ -3493,10 +3497,6 @@ SIDEBAR
 
   .ae-modal-box {
     max-width: 500px;
-    max-height: unset;
-    height: auto;
-
-    overflow: hidden;
 
     border-radius: 24px;
   }
@@ -3887,6 +3887,8 @@ SIDEBAR
 
   .ae-modal-box {
     border-radius: 20px;
+    max-height: 70vh;
+
   }
 
   .ae-form-area {
