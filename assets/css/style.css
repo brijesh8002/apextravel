@@ -638,9 +638,19 @@ background: radial-gradient(circle at top, #1f1f1f, #000000 70%);
 .info-box div {
   margin-bottom: 20px;
 }
+.info-box div a{
+  color: var(--tertiary-color);
+}
+.info-box div a:hover{
+  color: var(--primary-color);
+}
 
 .info-box i {
   color: var(--main-color);
+  margin-right: 8px;
+}
+.info-box div i {
+  color: var(--primary-color);
   margin-right: 8px;
 }
 
