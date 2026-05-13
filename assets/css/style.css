@@ -2065,7 +2065,7 @@ background: radial-gradient(circle at top, #1f1f1f, #000000 70%);
 
 /* LEFT PANEL */
 .up-sidebar {
-  background: #111;
+  background: var(--primary-color);
   color: #fff;
   padding: 30px;
   text-align: center;
@@ -2124,6 +2124,7 @@ background: radial-gradient(circle at top, #1f1f1f, #000000 70%);
 /* BUTTON */
 .up-btn {
   border-radius: 10px;
+  
 }
 
 .card-newbuttons {
@@ -2286,6 +2287,10 @@ LEFT
 /*========================
 RIGHT
 ========================*/
+
+.modal-header{
+  background: var(--primary-color);
+}
 
 .ae-form-area {
   padding: 30px;
