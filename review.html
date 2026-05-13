@@ -32,7 +32,7 @@
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h4 class="fw-bold mb-0">Customer Reviews</h4>
-                <!-- <button class="ae-review-btn" onclick="aeReviewOpen()">Write Review</button> -->
+                <button class="ae-review-btn" onclick="aeReviewOpen()">Write Review</button>
             </div>
 
             <!-- Reviews Grid -->
@@ -118,6 +118,41 @@
             </div>
 
         </section>
+
+
+        <!-- REVIEW MODAL -->
+        <div class="ae-review-modal" id="aeReviewModal">
+            <div class="ae-review-modal-box">
+
+                <div class="d-flex justify-content-between mb-3">
+                    <h5>Write a Review</h5>
+                    <span class="ae-review-close" onclick="aeReviewClose()">✕</span>
+                </div>
+
+                <!-- <input type="text" class="ae-review-input" placeholder="Your Name"> -->
+
+                <!-- Stars -->
+                <div class="ae-review-star-input mt-2 mx-auto">
+                    <span data-val="1">★</span>
+                    <span data-val="2">★</span>
+                    <span data-val="3">★</span>
+                    <span data-val="4">★</span>
+                    <span data-val="5">★</span>
+                </div>
+
+                <textarea class="ae-review-textarea mt-2" placeholder="Write your feedback..."></textarea>
+
+                <!-- Upload -->
+                <input type="file" multiple class="ae-review-file mt-2">
+
+                <div class="ae-review-preview mt-2"></div>
+
+                <button class="ae-review-submit mt-3" onclick="aeReviewSubmit()">Submit Review</button>
+
+            </div>
+        </div>
+
+        <!-- Customers Review and Feedback section -->
 
         
 
